@@ -1,0 +1,8 @@
+<div *ngIf="loaded$ | async">
+  <app-status-display [model]="model$ | async"></app-status-display>
+</div>
+
+<div *ngIf="(loaded$ |async) === false"
+     class="alert alert-info">
+  <h3>Loading your data...</h3>
+</div>

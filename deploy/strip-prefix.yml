@@ -1,0 +1,9 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: front-end-stripprefix
+spec:
+  stripPrefix:
+    prefixes:
+      - /playlists
+    forceSlash: false
