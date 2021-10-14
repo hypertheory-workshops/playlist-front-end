@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingressroutebar
+
+spec:
+  routes:
+    - match: Host(`localhost`) && PathPrefix(`/app`)
+      kind: Rule
+      services:
+        - name: ng-fe-service
+          port: 80
+      middlewares:
+        - name: front-end-stripprefix

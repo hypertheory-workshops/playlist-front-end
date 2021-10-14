@@ -1,4 +1,5 @@
 {
   "baseUrl": "http://localhost:4200",
-  "screenshotOnRunFailure": true
+  "screenshotOnRunFailure": true,
+  "experimentalStudio": true
 }

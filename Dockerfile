@@ -6,7 +6,7 @@ RUN npm cache clean --force
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run build
+RUN ["npm", "run", "build"]
 
 FROM nginx:1.21.3 AS ngi
 COPY --from=build /dist/src/app/dist/few200 /usr/share/nginx/html

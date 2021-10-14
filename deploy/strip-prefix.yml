@@ -5,5 +5,5 @@ metadata:
 spec:
   stripPrefix:
     prefixes:
-      - /playlists
-    forceSlash: false
+      - /app/
+    forceSlash: true
